@@ -25,8 +25,6 @@ const Shop = props => {
         console.log(data, typeof data);
         setPlayers(data);
     }
-    // use global var to track state of player data
-    let apiflag = true
 
     // new state var for shop comp.
     // rather than be asw app comp. it'lls be asw Shop comp to cause a rerender
@@ -35,21 +33,33 @@ const Shop = props => {
 
     const [players, setPlayers] = useState(() => loadPlayerData());
 
-    // func to run when 'go somewhere button gets clicked
-    // modplayers changes order of players array
-    // uses the setter to mutate the state/change the value of the players variable
-    // takes an element and moves the value to the end
-    // we're mutating shop component so that it re-renders when clicked
-    // state contains an array of players
-    const modifyPlayers = () => { 
-        let newPlayers = [...players];
-        newPlayers.splice(0, 1);
-        newPlayers.push(players[0]);
-        setPlayers(newPlayers);
+    // add to cart function 
+    const addToCart = (player) => { 
+        // access the current cart state(propst.cart) & make a copy we can mutate
+        // since we can't mutate state directly - Curly brackets mean making an object
+        // spread operator to create a copy of our cart property
+        let mutatingCart = {...props.cart}
+        // increase size of cart
+        mutatingCart.size++;
+        // increase total of the cart, needs to take in player info
+        mutatingCart.total += 0; Number(player.transfer_cost.slice(1, player.transfer_cost.length-1));
+        // check if player is in the cart
+        // if so, change quantity
+        // if not, add player to cart with a quantitiy of one
+        if (mutatingCart.items[player.id]){
+            mutatingCart.items[player.id].quantity++;
+        } else {
+            mutatingCart.items[player.id] = {
+                'player': player,
+                'quantity': 1
+            }
+        }
+        // mutate the state through setCart
+        props.setCart(mutatingCart);
     }
-
+    
     // func attached to execute when button is clicked
-    return (
+        return (
         <div className="Shop">
             <div className="container-fluid">
                 <div className="row justify-content-center">
@@ -65,7 +75,7 @@ const Shop = props => {
                                 <div className="card-body bg-dark">
                                     <h5 className="card-title">{`${player.first_name} ${player.last_name}`}</h5>
                                     <p className="card-text">{`${player.number} ${player.postion} ${player.team} ${player.nationality}`}</p>
-                                    <button className="btn btn-primary btn-danger" onClick={modifyPlayers}><strong>{`${player.transfer_cost}`}</strong></button>
+                                    <button className="btn btn-block btn-primary btn-danger" onClick={() => addToCart(player)}>{`${player.transfer_cost}`}</button>
                                 </div>
                             </div>
                         })

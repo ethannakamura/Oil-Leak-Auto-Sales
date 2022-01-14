@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Link } from 'react-router-dom';
 
 const Header = prop => {
 
@@ -12,7 +11,7 @@ const Header = prop => {
             <header>
                 <iframe width="560" height="315"
                     src= "https://www.youtube.com/embed/01aV_PbiT30" 
-                    frameborder="0" allow="autoplay; encrypted-media"
+                    frameBorder="0" allow="autoplay; encrypted-media"
                     allowFullScreen/>
             <h4 className="Not">LET US</h4>
             </header>

@@ -19,6 +19,13 @@ const App = () => {
   // in the app layer including the navbar and home route
   const [makes, setMakes] = useState(['Nexen Tire','Puma','ETIHAD Airways','Evonik', 'Captain Morgan']);
 
+  // cart state hook -> creation of our initial cart object
+  const [cart, setCart] = useState({
+  total: 0,
+  size: 0,
+  items: {}
+  })
+  
   // state of ea. comp. is accessed through suseState, a HOOK definining each 
   // state with the variable 'makes', mutated with the setter which causes 
   // components to re-render (by changing their state)
@@ -27,11 +34,11 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <Navbar />
+      <Navbar cart={cart} />
       <Routes>
         <Route children path= '/' element={<Home />} />
         <Route children path= '/Sponsorships' element={<Sponsorships makes = {makes} setMakes={setMakes}/>} />
-        <Route children path= '/Shop' element={<Shop />} />
+        <Route children path= '/Shop' element={<Shop cart={cart} setCart={setCart} />} />
       </Routes>
     </div>
   );
