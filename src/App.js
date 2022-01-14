@@ -16,7 +16,7 @@ const App = () => {
   // state variable 'makes' is defined at app layer 
   // setting this state/mutating this state creates a re-render for everythign
   // in the app layer including the navbar and home route
-  const [makes, setMakes] = useState(['Nexen Tire','Puma','ETIHAD Airway','Evonik', 'Captain Morgan']);
+  const [makes, setMakes] = useState(['Nexen Tire','Puma','ETIHAD Airways','Evonik', 'Captain Morgan']);
 
   // state of ea. comp. is accessed through suseState, a HOOK definining each 
   // state with the variable 'makes', mutated with the setter which causes 
