@@ -13,9 +13,8 @@ code {
 }
 
 a {
-  color: rgb(218, 4, 4);
+  color: rgb(254, 254, 254);
 }
 a:hover {
-   color: rgb(255, 255, 255)
+   color: rgb(239, 0, 0)
 }
-

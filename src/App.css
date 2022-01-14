@@ -1,5 +1,48 @@
 .App {
   text-align: center;
+  color:whitesmoke;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  min-width: 100%;
+}
+.leadtitle{
+  margin-top:390px;
+  color:rgb(255, 255, 255);
+  background-color: rgba(93, 93, 93, 0.523);
+  font-style: oblique;
+  font-weight: bolder;
+  font-size: 80px;
+}
+
+.sponsortitle{
+  margin-top:50px;
+  color:rgb(255, 255, 255);
+  background-color: rgba(93, 93, 93, 0.523);
+  font-style: oblique;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.Home{
+  background-image: url(https://images.hdqwalls.com/download/cristiano-ronaldo-nike-players-5k-xp-2560x1440.jpg);
+  min-height: 100vh;
+  min-width: 100%;
+}
+.Sponsorships{
+  background-image:url(https://images.hdqwalls.com/download/cr7-3j-2560x1440.jpg);
+  color:black;
+  font-weight: bold;
+  font-size: 20px;
+  display: block;
+  position: relative;
+  min-height: 100vh;
+  min-width: 100%;
+}
+.Shop{
+  background-image:url(https://images.hdqwalls.com/download/fifa-world-cup-russia-2018-trophy-ka-2560x1440.jpg);
+  min-height: 100vh;
+  min-width: 100%;
+  color:rgb(255, 255, 255);
 }
 
 .App-logo {

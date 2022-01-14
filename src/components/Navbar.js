@@ -7,18 +7,18 @@ const Navbar = prop => {
     useEffect(() => {console.log('Navbar component rendered or rerendered')})
 
     return(
-    <nav className="navbar navbar-expand-lg navbar-danger bg-dark text-danger">
-        <Link className="navbar-brand" to="/"> Oil Leak Auction House</Link>
+    <nav className="navbar navbar-expand-lg navbar bg-dark bg-black text-light">
+            <Link className="navbar-brand" to="/">Red Card Talent Management</Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="/navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarText">
             <ul className="navbar-nav mr-auto">
-                <li className="nav-item active">
-                    <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
+                <li className="nav-item">
+                    <Link className="nav-link" to="/Sponsorships">Active Sponsorships</Link>
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link" to="/Shop">Shop</Link>
+                    <Link className="nav-link" to="/Shop">Free Agents</Link>
                 </li>
             </ul>
             <span className="navbar-text">
@@ -29,3 +29,4 @@ const Navbar = prop => {
     )}
 
 export default Navbar;
+

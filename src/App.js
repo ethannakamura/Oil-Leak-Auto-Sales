@@ -1,6 +1,8 @@
+// layers are: react(react-router(app(nav()routes(home()shop()))))
 import './App.css';
 import Navbar from './components/Navbar';
 import Home from './views/Home';
+import Sponsorships from './views/Sponsorships';
 import Shop from './views/Shop';
 import { Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
@@ -14,7 +16,7 @@ const App = () => {
   // state variable 'makes' is defined at app layer 
   // setting this state/mutating this state creates a re-render for everythign
   // in the app layer including the navbar and home route
-  const [makes, setMakes] = useState(['Ford','Honda','Mazda','Mitsubishi','Ferrari']);
+  const [makes, setMakes] = useState(['Nexen Tire','Puma','ETIHAD Airway','Evonik', 'Captain Morgan']);
 
   // state of ea. comp. is accessed through suseState, a HOOK definining each 
   // state with the variable 'makes', mutated with the setter which causes 
@@ -24,9 +26,10 @@ const App = () => {
   return (
     <div className="App">
       <Navbar />
-  
+        
       <Routes>
-        <Route children path= '/' element={<Home makes = {makes} setMakes={setMakes}/>} />
+        <Route children path= '/' element={<Home />} />
+        <Route children path= '/Sponsorships' element={<Sponsorships makes = {makes} setMakes={setMakes}/>} />
         <Route children path= '/Shop' element={<Shop />} />
       </Routes>
     </div>
