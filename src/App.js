@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Home from './views/Home';
 import Sponsorships from './views/Sponsorships';
 import Shop from './views/Shop';
+import Cart from './views/Cart';
 import { Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -39,6 +40,7 @@ const App = () => {
         <Route children path= '/' element={<Home />} />
         <Route children path= '/Sponsorships' element={<Sponsorships makes = {makes} setMakes={setMakes}/>} />
         <Route children path= '/Shop' element={<Shop cart={cart} setCart={setCart} />} />
+        <Route children path= '/Cart' element={<Cart cart={cart} setCart={setCart} />} />
       </Routes>
     </div>
   );

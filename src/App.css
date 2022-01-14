@@ -1,5 +1,10 @@
 Body{
-  background-color: rgb(218, 47, 47);
+  background-color: rgb(218, 55, 55);
+}
+.roster{
+  background-image: url(https://images.hdqwalls.com/download/manchester-united-hd-wide-2560x1440.jpg);
+  width: 100vw;
+  height: 100vh;
 }
 
 .navstuff{

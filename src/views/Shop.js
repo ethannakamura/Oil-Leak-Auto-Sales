@@ -63,7 +63,7 @@ const Shop = props => {
         <div className="Shop">
             <div className="container-fluid">
                 <div className="row justify-content-center">
-                    <h3 className="mt-3 bg-dark">Recruit A Professional Red Carder!</h3>
+                    <h3 className="mt-3 text-dark">Recruit A Player!</h3>
                 </div>
                 <div className="row justify-content-center">
                     {/* if no player data, show a loading item, if player data, show player cards */}
