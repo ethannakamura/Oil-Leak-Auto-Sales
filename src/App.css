@@ -1,3 +1,25 @@
+Body{
+  background-color: rgba(130, 11, 11, 0.962);
+}
+
+.navstuff{
+  align-items: center;
+}
+.Let{
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0);
+}
+.Not{
+  margin-top: 2px;
+  color: rgba(255, 255, 255, 0);
+}
+
+.Embed{
+  background-image: url(https://images.hdqwalls.com/download/fifa-19-stadium-4k-of-2560x1440.jpg);
+  margin-bottom: 10px;
+  min-width: 100vh;
+  background-repeat: no-repeat;
+}
 .App {
   text-align: center;
   color:whitesmoke;

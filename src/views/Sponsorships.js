@@ -18,6 +18,12 @@ const Sponsorships = props => {
     // re render
         let newMakes = [...props.makes]; // spread operator ... allows us to make a copy of props.makes
         newMakes.push('T-Mobile');
+        props.setMakes(newMakes);
+        newMakes.push('Volkswagen')
+        props.setMakes(newMakes);
+        newMakes.push('Nestlé')
+        props.setMakes(newMakes);
+        newMakes.push('BMW')
         props.setMakes(newMakes); // update our state and force a re-render
     }
     // when our state mutates our component re-renders, changing the value
@@ -27,7 +33,7 @@ const Sponsorships = props => {
     // switching between home/shop page causes rerenders in the react app
     // this runs the useEffect hook for each page
     useEffect(() => {
-        console.log(`Rendered or rerendered Sponsorships! Number of makes: ${props.makes.length}.`);});
+        console.log(`Rendered or rerendered Sponsorships! Number of sponsors: ${props.makes.length}.`);});
     // signing in--adding to a cart happen at this top section, things the user 
     // doesn't see
     // inside function stuff happens user doesn't see, working with states, hooks, databases

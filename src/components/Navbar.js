@@ -12,7 +12,7 @@ const Navbar = prop => {
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="/navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarText">
+        <div className="navstuff collapse navbar-collapse" id="navbarText">
             <ul className="navbar-nav mr-auto">
                 <li className="nav-item">
                     <Link className="nav-link" to="/Sponsorships">Active Sponsorships</Link>
@@ -26,7 +26,15 @@ const Navbar = prop => {
             </span>
         </div>
     </nav>
+    
     )}
-
+    <header>
+    <div class="ratio ratio-16x9 bg-dark">
+        <iframe width="992" height="558" src="https://www.youtube.com/embed/01aV_PbiT30"
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+    encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+    </div>
+</header>
 export default Navbar;
 

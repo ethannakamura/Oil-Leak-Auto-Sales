@@ -1,6 +1,7 @@
 // layers are: react(react-router(app(nav()routes(home()shop()))))
 import './App.css';
 import Navbar from './components/Navbar';
+import Header from './components/Header';
 import Home from './views/Home';
 import Sponsorships from './views/Sponsorships';
 import Shop from './views/Shop';
@@ -25,8 +26,8 @@ const App = () => {
   // includes a func. that can mutate that state in Home.js.
   return (
     <div className="App">
+      <Header />
       <Navbar />
-        
       <Routes>
         <Route children path= '/' element={<Home />} />
         <Route children path= '/Sponsorships' element={<Sponsorships makes = {makes} setMakes={setMakes}/>} />

@@ -25,13 +25,15 @@ const Shop = props => {
         console.log(data, typeof data);
         setPlayers(data);
     }
-    
+    // use global var to track state of player data
+    let apiflag = true
 
     // new state var for shop comp.
     // rather than be asw app comp. it'lls be asw Shop comp to cause a rerender
     // of the shop comp.
     // cont [statename, settervarname] = usestate(['set', 'value', 'for', 'statename'])
-    const [players, setPlayers] = useState(() => loadPlayerData()); 
+
+    const [players, setPlayers] = useState(() => loadPlayerData());
 
     // func to run when 'go somewhere button gets clicked
     // modplayers changes order of players array
@@ -51,8 +53,7 @@ const Shop = props => {
         <div className="Shop">
             <div className="container-fluid">
                 <div className="row justify-content-center">
-                    <h3 className="mt-3 bg-dark">Sign our clients to your team, they're qualified in 
-                    getting red cards to secure a win!</h3>
+                    <h3 className="mt-3 bg-dark">Recruit A Professional Red Carder!</h3>
                 </div>
                 <div className="row justify-content-center">
                     {/* if no player data, show a loading item, if player data, show player cards */}
@@ -63,7 +64,7 @@ const Shop = props => {
                                 <img src={player.image} className="card-img-top" alt={`${player.first_name} ${player.last_name}`} />
                                 <div className="card-body bg-dark">
                                     <h5 className="card-title">{`${player.first_name} ${player.last_name}`}</h5>
-                                    <p className="card-text">{`${player.number} ${player.position} ${player.team} ${player.nationality}`}</p>
+                                    <p className="card-text">{`${player.number} ${player.postion} ${player.team} ${player.nationality}`}</p>
                                     <button className="btn btn-primary btn-danger" onClick={modifyPlayers}><strong>{`${player.transfer_cost}`}</strong></button>
                                 </div>
                             </div>
